@@ -1,0 +1,28 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  score   R-squared:                       0.267
+Model:                            OLS   Adj. R-squared:                  0.267
+Method:                 Least Squares   F-statistic:                     927.4
+Date:                Mon, 23 Nov 2026   Prob (F-statistic):               0.00
+Time:                        02:32:02   Log-Likelihood:                -9104.8
+No. Observations:                5100   AIC:                         1.822e+04
+Df Residuals:                    5097   BIC:                         1.824e+04
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+===================================================================================================================
+                                                      coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------------------------
+Intercept                                           3.8499      0.027    143.495      0.000       3.797       3.903
+C(Sentiment, Treatment('Positive'))[T.Negative]    -2.0570      0.048    -43.009      0.000      -2.151      -1.963
+C(Sentiment, Treatment('Positive'))[T.Neutral]     -0.7658      0.056    -13.787      0.000      -0.875      -0.657
+==============================================================================
+Omnibus:                      339.457   Durbin-Watson:                   1.628
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              207.000
+Skew:                          -0.361   Prob(JB):                     1.12e-45
+Kurtosis:                       2.327   Cond. No.                         3.23
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Spearman rho (stars vs compound) = 0.526, p = 0.00e+00, n = 5100

@@ -1,0 +1,10 @@
+pandas
+openpyxl
+nltk
+vaderSentiment
+google-play-scraper
+matplotlib
+wordcloud
+scikit-learn
+scipy
+statsmodels

@@ -1,0 +1,4 @@
+Sentiment,n,mean_stars,mean_compound
+Negative,1328,1.793,-0.474
+Neutral,880,3.084,0.0
+Positive,2892,3.85,0.565
