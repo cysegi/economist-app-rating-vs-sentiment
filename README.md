@@ -21,8 +21,8 @@ Course project for ABM503D Web and Social Media Analytics, Universiti Sains Mala
 
 1. Collection: `notebooks/00_collect_google_play_reviews.ipynb`.
 2. Cleaning and scoring: `notebooks/01_vader_sentiment.ipynb`.
-   - Steps: lowercase, remove URLs and non-letters, remove stopwords, lemmatize.
-   - VADER compound score, labeled Positive (>= 0.05), Negative (<= -0.05), otherwise Neutral.
+   - Steps: language check with translation to English when needed, lowercase, remove links, emojis, mentions and punctuation, tokenize, remove stopwords (keeping not, no and nor), lemmatize.
+   - NLTK VADER compound score, labeled Positive (> 0.05), Negative (< -0.05), otherwise Neutral.
    - Outputs: pie chart, word clouds, top-word bars, and daily, monthly and yearly trends.
 3. Statistics: `src/rating_vs_sentiment.py`. This is an OLS regression of star rating on sentiment category, with Positive as the reference, plus a Spearman correlation between stars and the compound score. The course paper ran this regression in an Excel add-in; this script reproduces it in Python with the same coefficients.
 
@@ -50,6 +50,7 @@ Charts are in `results/charts/`. Tables from the script are in `results/`.
 
 - VADER is a lexicon model. It misses sarcasm and domain terms, and it does not weigh mixed reviews well.
 - Reviews come from a single storefront and language, so they are not a random sample of users.
+- The cleaning step `re.sub(r'rt', '', text)`, inherited from a Twitter template, also removes "rt" inside words (for example, "start" becomes "sta"). This slightly affects the word clouds and top-word charts. VADER scores were computed on the cleaned text.
 - The regression treats the 1 to 5 star scale as interval data.
 
 ## Run

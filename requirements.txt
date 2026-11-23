@@ -8,3 +8,6 @@ wordcloud
 scikit-learn
 scipy
 statsmodels
+langdetect
+deep-translator
+regex
