@@ -64,4 +64,5 @@ python src/rating_vs_sentiment.py data/output_economist_reviews2_file.xlsx
 
 - Joint work with Felicia Yeow Kar Mun.
 - Cleaning and VADER notebook structure adapted from ABM503D lab material (Prof. Dr. Nor Hasliza Md Saad, USM).
+- Related course lab notebooks (Week 7 VADER sentiment and LDA topic modeling): [abm503d-week7-text-analytics-labs](https://github.com/cysegi/abm503d-week7-text-analytics-labs).
 - The regression script was added after the course to make the statistics reproducible in Python.
